@@ -1,0 +1,157 @@
+:root {
+  --primary: #7c3aed;
+  /* Purple */
+  --bg-dark: #0f172a;
+  /* Deep Navy/Black background */
+  --card-bg: #1e293b;
+  /* Dark Slate for the card */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --input-bg: #334155;
+  --purple-item: #864ec4;
+  /* Lighter purple from image */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  background-image: radial-gradient(circle at 10% 20%, rgb(30, 41, 59) 0%, rgb(15, 23, 42) 90%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollbar for the list if needed */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Form Styles */
+.form-group {
+  display: flex;
+  gap: 0;
+  /* Connected look */
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  background-color: transparent;
+  border: 1px solid #475569;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+.btn-add {
+  background-color: #9333ea;
+  /* Purple */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background-color: #a855f7;
+}
+
+/* Todo Item Styles */
+.todo-item-purple {
+  background-color: #8b5cf6;
+  /* Main item purple color */
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.todo-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icon-btn {
+  color: white;
+  opacity: 0.9;
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.page-badge {
+  background-color: #d1d5db;
+  color: #1f2937;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
